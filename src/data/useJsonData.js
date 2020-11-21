@@ -4,20 +4,31 @@
  * @param data Data array consists of Json objects
  * @returns {{dataArray: *, getDataByType: (function(*): *), getTypes: (function(): *)}}
  */
-const useJsonData = (data) => {
-  const dataArray = data.repayments;
+import {useState} from "react";
+
+const useJsonData = () => {
+  const [jsonData, setJsonData] = useState({payments: []});
 
   const getDataByType = (type) => {
-    return dataArray.filter(record => record.type === type);
+    return jsonData.payments.filter(record => record.type === type);
+  }
+
+  const getData = () => {
+    return jsonData;
+  }
+
+  const setData = (newData) => {
+    setJsonData(newData);
   }
 
   const getTypes = () => {
-    const types = dataArray.map(record => record.type);
+    const types = jsonData.payments.map(record => record.type);
     return types.filter((type, index, array) => array.indexOf(type) === index);
   }
 
   return {
-    dataArray,
+    getData,
+    setData,
     getDataByType,
     getTypes,
   };

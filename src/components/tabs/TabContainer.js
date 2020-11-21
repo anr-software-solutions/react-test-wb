@@ -4,9 +4,9 @@ import {AppBar, Tab} from '@material-ui/core';
 import {TabContext, TabList, TabPanel} from '@material-ui/lab';
 
 import useJsonData from "../../data/useJsonData";
-import data from '../../data/data.json';
 import tabConstants from "../../constants/tabConstants";
 import Table from "../table/Table";
+import useFetch from "use-http";
 
 /**
  * Tab Container which contains tabs and corresponding table content
@@ -15,7 +15,22 @@ import Table from "../table/Table";
  */
 const TabContainer = () => {
   const [value, setValue] = React.useState('1');
-  const {getTypes, getDataByType} = useJsonData(data);
+  const {getTypes, getDataByType, getData, setData} = useJsonData();
+  const { data, loading, error } = useFetch('https://us-central1-rest-function.cloudfunctions.net/payments', { data: [] }, []);
+
+  if (error) {
+    return 'Error!';
+  }
+
+  if (loading) {
+    return 'Loading!';
+  }
+
+  if (data) {
+    if (getData().payments.length < 1) {
+      setData(data);
+    }
+  }
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
