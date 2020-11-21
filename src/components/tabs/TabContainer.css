@@ -1,0 +1,29 @@
+/* '!important' is used to override default lib values where necessary */
+
+.tab-container {
+    flex-grow: 1;
+}
+
+.tab-bar {
+    box-shadow: none !important;
+    border-bottom: 1px solid #e4dfdf;
+}
+
+.tab-list {
+    background-color: white;
+    color: black;
+}
+
+.tab-item {
+    text-transform: none !important;
+}
+
+/*Mui Tab theme overrides*/
+
+.PrivateTabIndicator-colorSecondary-3, .jss3 {
+    background-color: darkgreen !important;
+}
+
+.MuiTab-wrapper {
+    font-weight: bold !important;
+}

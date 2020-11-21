@@ -1,0 +1,28 @@
+.footer-container {
+    width: 100%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.item-font {
+    font-size: 0.975rem;
+    font-weight: bold;
+}
+
+.item-left {
+    padding-left: 16px;
+}
+
+/* For mobile phones: */
+.item-right {
+    padding-right: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For desktop/tablets: */
+    .item-right {
+        padding-right: 16px;
+    }
+}

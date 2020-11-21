@@ -1,0 +1,28 @@
+/*Mui Tab theme overrides*/
+/* '!important' is used to override default values where necessary */
+
+.MuiDataGrid-root {
+    border: 0 !important;
+}
+
+.MuiDataGrid-colCellTitle {
+    font-size: 0.75rem !important;
+    color: #a0a0a0;
+    font-weight: bold !important;
+}
+
+.MuiDataGrid-cell {
+    font-size: 0.95rem !important;
+}
+
+/* For mobile phones: */
+.MuiTabPanel-root {
+    padding-left: 0 !important;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For desktop/tablets: */
+    .MuiTabPanel-root {
+        padding-left: 35px !important;
+    }
+}
