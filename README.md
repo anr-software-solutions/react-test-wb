@@ -1,5 +1,5 @@
 # React App for WorkBuddy
-Live project is here, https://wb-test-react.web.app/.
+Live project is here, https://workbuddy-webapp.web.app/
 
 ## Features & Approach
 
@@ -16,14 +16,16 @@ Live project is here, https://wb-test-react.web.app/.
     - Added the project to Github
  - **Firebase integration for deployments**. 
     - Find the project URL https://wb-test-react.web.app/
+ - **Firebase Functions deliver data on demand via REST API**. 
+    - Hosted Firebase function which delivers Json data. Github URL: https://github.com/anr-software-solutions/firebase-function-restapi
  - **CI/CD setup**. 
     - Whenever a commit is performed, Configured Github workflow gets executed, and a new version will be deployed in above project URL. No manual deployments are required.
- - **Code quality check with SonarQube**. https://sonarcloud.io/dashboard?id=anr-software-solutions_coding-test-nb
+ - **Code quality check with SonarQube**. https://sonarcloud.io/dashboard?id=anr-software-solutions_react-test-wb
     - Github project is integrated with SonarCloud for quality purposes. Whenever a commit is performed, SonarQube analysis will run and check for bugs, vulnerabilities, security hotspots, code smells and code duplications.
     
 ## Other project details
- - **Dynamic tabs and table creation** based on Json data provided in `src/data/data.json`.
-    - If data of an additional type is added to data.json, just need to add display name mapping to `src/constants/tabConstants.js`
+ - **Dynamic tabs and table creation** based on Json data fetched from cloud function created for this purpose.
+    - If data of an additional type is added to data, just need to add display name mapping to `src/constants/tabConstants.js`
  - Sorting is provided for `Date`. Sort by ascending and descending order.
  - No errors/warnings when running the project with `npm start` and no browser console errors.
  - Tests are passing 100%. Check `screens/test-results.png`.
@@ -36,9 +38,9 @@ Live project is here, https://wb-test-react.web.app/.
 
 ## Setup the project in Local
  
-Check the latest version https://nimble-test-react.web.app/. If you want to run the project in local, follow the below steps. You will need to have Node >= 8.10 and npm >= 5.6 on your machine.  
+Check the latest version https://workbuddy-webapp.web.app/. If you want to run the project in local, follow the below steps. You will need to have Node >= 8.10 and npm >= 5.6 on your machine.  
 
- - Clone project to your local machine. https://github.com/anr-software-solutions/coding-test-nb.git
+ - Clone project to your local machine. https://github.com/anr-software-solutions/react-test-wb.git
  - Run `npm install && npm start`
  - Project will be running on http://localhost:3000/
 
