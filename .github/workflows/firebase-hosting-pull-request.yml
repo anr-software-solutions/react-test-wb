@@ -13,6 +13,6 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_TEST_WB }}'
-          projectId: nimble-test-react
+          projectId: workbuddy-webapp
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
