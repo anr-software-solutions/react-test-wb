@@ -1,4 +1,4 @@
-# React App for Wilson
+# React App for WorkBuddy
 Live project is here, https://wb-test-react.web.app/.
 
 ## Features & Approach
