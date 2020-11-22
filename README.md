@@ -15,7 +15,7 @@ Live project is here, https://workbuddy-webapp.web.app/
  - **Cloud hosted project**.
     - Added the project to Github
  - **Firebase integration for deployments**. 
-    - Find the project URL https://wb-test-react.web.app/
+    - Find the project URL https://workbuddy-webapp.web.app/
  - **Firebase Functions deliver data on demand via REST API**. 
     - Hosted Firebase function which delivers Json data. Github URL: https://github.com/anr-software-solutions/firebase-function-restapi
  - **CI/CD setup**. 
