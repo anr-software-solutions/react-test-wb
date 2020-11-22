@@ -29,7 +29,7 @@ Live project is here, https://workbuddy-webapp.web.app/
  - Sorting is provided for `Date`. Sort by ascending and descending order.
  - No errors/warnings when running the project with `npm start` and no browser console errors.
  - Tests are passing 100%. Check `screens/test-results.png`.
- - Mobile view shows `Total repayments` and `total amount` responsively. Table becomes scrollable in mobile to cater consistent table structure with descriptions.
+ - Mobile view shows `Total payments` and `total amount` responsively. Table becomes scrollable in mobile to cater consistent table structure with descriptions.
  - Checked the project with edge cases (along with unit tests). 
      - If there is no data for a particular type, the table shows a 'No Rows' message
      - If there is a very long description, the table maintains its structure by cropping the later part. Check `screens/long-desc.png`.
