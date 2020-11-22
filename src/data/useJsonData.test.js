@@ -1,14 +1,15 @@
-import React from 'react';
 import useJsonData from "./useJsonData";
 import data from './data.json';
 
 describe('useJsonData methods', () => {
-  it('`dataArray` should return repayments array', () => {
-    const {dataArray} = useJsonData(data);
-    expect(dataArray).toEqual(data.repayments);
+  it('`dataArray` should return payments array', () => {
+    const {getData} = useJsonData(data);
+    const returnData = getData();
+    expect(data).toEqual(returnData);
   });
 
-  it('`getDataByType` should return array of particular data', () => {
+  it('`getDataByType` should return array of particular data',  () => {
+    const {getDataByType} = useJsonData(data);
     const testType = 'FAILED';
     const expectedArray = [
       {
@@ -25,11 +26,10 @@ describe('useJsonData methods', () => {
       }
     ]
 
-    const {getDataByType} = useJsonData(data);
     expect(getDataByType(testType)).toEqual(expectedArray);
   });
 
-  it('`getTypes` should return array of types', () => {
+  it('`getTypes` should return array of types',  () => {
     const typesArray = ['PENDING', 'FAILED', 'PROCESSED'];
 
     const {getTypes} = useJsonData(data);

@@ -7,6 +7,7 @@ import useJsonData from "../../data/useJsonData";
 import tabConstants from "../../constants/tabConstants";
 import Table from "../table/Table";
 import useFetch from "use-http";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 /**
  * Tab Container which contains tabs and corresponding table content
@@ -19,11 +20,14 @@ const TabContainer = () => {
   const { data, loading, error } = useFetch('https://us-central1-rest-function.cloudfunctions.net/payments', { data: [] }, []);
 
   if (error) {
-    return 'Error!';
+    return <div>Error Loading Data</div>;
   }
 
   if (loading) {
-    return 'Loading!';
+    return (
+      <div style={{paddingLeft: 200, paddingTop: 100}}>
+        <CircularProgress />
+      </div>);
   }
 
   if (data) {

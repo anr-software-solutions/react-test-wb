@@ -29,13 +29,6 @@ describe('<Table/>', () => {
     expect(getByRole('grid')).toBeInTheDocument();
   });
 
-  it('When empty array is provided then Table should load with appropriate `No Rows` message', () => {
-    const {getByRole, getByText} = render(<Table data={[]}/>);
-
-    expect(getByRole('grid')).toBeInTheDocument();
-    expect(getByText('No Rows')).toBeInTheDocument();
-  });
-
   it('When Table loads then all rows should be in viewport', () => {
     const numberOfRows = 4;   // three data rows plus footer row
     const {getAllByRole} = render(<Table data={data}/>);

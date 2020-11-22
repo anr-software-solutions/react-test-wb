@@ -17,7 +17,7 @@ const Footer = ({data}) => {
     <div className="MuiDataGrid-footer footer-container">
       <div>
           <span className="item-font item-left">
-            {`Total ${tabConstants[data[0].type]} Payments`}
+            {`Total ${tabConstants[data[0]?.type]} Payments`}
           </span>
       </div>
       <div className="align-right">
