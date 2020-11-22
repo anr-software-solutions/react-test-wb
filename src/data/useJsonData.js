@@ -4,7 +4,6 @@
  * @param data Data array consists of Json objects
  * @returns {{dataArray: *, getDataByType: (function(*): *), getTypes: (function(): *)}}
  */
-
 const useJsonData = (data) => {
   let jsonData = data && data.payments ? data : {payments: []};
 
